@@ -63,5 +63,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
 
+# Activate DIRENV
+eval "$(direnv hook zsh)"
+
 # EXECUTE zsh-syntax-highlighting
 source /home/felipin/code/felipeandreslugosalazar/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
