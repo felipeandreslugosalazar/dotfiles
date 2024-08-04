@@ -57,3 +57,5 @@ ssh-add -l &>/dev/null
 if [ $? -ne 0 ]; then
     ssh-add ~/.ssh/jundev
 fi
+
+source /home/felipin/code/felipeandreslugosalazar/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
