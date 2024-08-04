@@ -7,7 +7,7 @@ ZSH_THEME="robbyrussell"
 # Useful oh-my-zsh plugins for Le Wagon bootcamps
 # plugins=(git gitfast last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search) //original line
 # addedline
-plugins=(gitfast last-working-dir common-aliases sublime vscode zsh-syntax-highlighting history-substring-search ssh-agent heroku chucknorris)
+plugins=(gitfast last-working-dir common-aliases sublime vscode history-substring-search heroku ssh-agent)
 
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
@@ -46,7 +46,14 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
 export BROWSER=/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe
+
 sudo /etc/init.d/postgresql start
-export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
-export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
-export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
+
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+    eval "$(ssh-agent -s)"
+fi
+
+ssh-add -l &>/dev/null
+if [ $? -ne 0 ]; then
+    ssh-add ~/.ssh/jundev
+fi
