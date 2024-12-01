@@ -67,4 +67,6 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(direnv hook zsh)"
 
 # EXECUTE zsh-syntax-highlighting
-source /home/felipin/code/felipeandreslugosalazar/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /home/felipin/code/felipeandreslugosalazar/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"

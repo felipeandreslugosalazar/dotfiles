@@ -11,7 +11,7 @@
 
 [core]
   pager = less -FRSX
-	editor = code --wait
+	editor = subl -n -w  >/dev/null 2>&1
 
 [alias]
   co = checkout
@@ -48,4 +48,4 @@
   mergeoptions = --no-edit
 [user]
 	email = felipeandreslugo@gmail.com
-	name = felipe lugo
+	name = felipe andres lugo salazar
