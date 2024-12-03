@@ -10,7 +10,7 @@ alias cls="clear"
 
 # alias for git
 alias gst="git status"
-alias gad="git add ."
+alias gad="git add"
 alias gcom="git commit -m"
 alias gpom="git push origin master"
 alias gra="git restore ."
