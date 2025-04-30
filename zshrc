@@ -15,25 +15,23 @@
 ZSH=$HOME/.oh-my-zsh
 
 # You can change the theme with another one from https://github.com/robbyrussell/oh-my-zsh/wiki/themes
-ZSH_THEME="robbyrussell2"
+ZSH_THEME="robbyrussell"
+# ZSH_THEME="agnoster"
 #robbyrussell
 
 # Useful oh-my-zsh plugins for Le Wagon bootcamps
-# plugins=(git gitfast last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search) //original line
-# addedline
 plugins=(
-gitfast
-last-working-dir
-common-aliases
-sublime
-vscode
-history-substring-search
-ssh-agent
-heroku
-pyenv
-pylint
-python
-symfony
+git 
+gitfast 
+last-working-dir 
+common-aliases 
+sublime 
+vscode 
+history-substring-search 
+heroku 
+ssh-agent 
+zsh-syntax-highlighting
+rails
 ruby
 )
 
@@ -158,3 +156,23 @@ eval "$(rbenv init -)"
 FPATH=~/.rbenv/completions:"$FPATH"
 autoload -U compinit
 compinit
+sudo /etc/init.d/postgresql start
+
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+    eval "$(ssh-agent -s)"
+fi
+
+ssh-add -l &>/dev/null
+if [ $? -ne 0 ]; then
+    ssh-add ~/.ssh/jundev
+fi
+
+# LOADS NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
+
+# Activate DIRENV
+eval "$(direnv hook zsh)"
+
+export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"

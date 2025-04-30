@@ -32,3 +32,4 @@ alias rb="ruby"
 
 # alias for explorer
 alias open_explorer="explorer.exe ."  
+alias open="explorer.exe ."
