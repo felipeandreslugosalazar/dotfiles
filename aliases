@@ -5,14 +5,30 @@ alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/m
 # Quickly serve the current directory as HTTP
 alias serve='ruby -run -e httpd . -p 8000' # Or python -m SimpleHTTPServer :)
 
-# Soy muy locho y no quiero escribir clear para limpiar la consola
+# atajo par clear para limpiar la consola
 alias cls="clear"
+alias cgst="clear && gst"
 
 # alias for git
 alias gst="git status"
-alias gad="git add ."
+alias gad="git add"
 alias gcom="git commit -m"
 alias gpom="git push origin master"
 alias gra="git restore ."
+alias glg="git log"
 
 alias gplw="git pull upstream master -X ours"
+
+alias syms="symfony serve"
+
+# alias for RAILS
+alias envLocal="RAILS_ENV=localDev" # set var in mode local 
+alias envDev="RAILS_ENV=development" # set var in mode development
+alias envTest="RAILS_ENV=test" # set var in mode test
+alias envProd="RAILS_ENV=production" # set var in mode production
+
+# alias for ruby
+alias rb="ruby"
+
+# alias for explorer
+alias open_explorer="explorer.exe ."  
