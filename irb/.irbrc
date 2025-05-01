@@ -1,6 +1,6 @@
 begin
-  require 'rubygems'
-  require 'pry'
+  require "rubygems"
+  require "pry"
 rescue LoadError
 end
 
